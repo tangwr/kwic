@@ -14,14 +14,14 @@ public class CircularShiftTest {
     public void testGetCircularShifts() throws Exception {
         CircularShift circularShit = new CircularShift("tEst this Circular shIft");
         String[] shifts = circularShit.getCircularShifts();
-        HashSet<String> setOfShits = new HashSet<String>();
+        HashSet<String> testSet = new HashSet<String>();
         for (String str : shifts) {
-            setOfShits.add(str);
+            testSet.add(str);
         }
-        assertTrue(setOfShits.size() == 4);
-        assertTrue(setOfShits.contains("Test This Circular Shift"));
-        assertTrue(setOfShits.contains("This Circular Shift Test"));
-        assertTrue(setOfShits.contains("Circular Shift Test This"));
-        assertTrue(setOfShits.contains("Shift Test This Circular"));
+        assertTrue(testSet.size() == 4);
+        assertTrue(testSet.contains("Test This Circular Shift"));
+        assertTrue(testSet.contains("This Circular Shift Test"));
+        assertTrue(testSet.contains("Circular Shift Test This"));
+        assertTrue(testSet.contains("Shift Test This Circular"));
     }
 }
